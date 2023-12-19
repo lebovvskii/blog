@@ -1,0 +1,22 @@
+{
+  "name": "voltilp",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "SEU Developer &lt;dev@searchengineunity.com&gt;",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "test": "sanity check",
+    "deploy": "npm run graphql-deploy &amp;&amp; npm run sanity-deploy",
+    "graphql-deploy": "sanity graphql deploy --generation gen2",
+    "sanity-deploy": "sanity deploy",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "styled-components": "^6.1.1"
+  }
+}
