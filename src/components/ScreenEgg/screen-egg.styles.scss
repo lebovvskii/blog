@@ -1,4 +1,4 @@
-.screenEgg {
+.screen-egg {
     position: fixed;
     background: #FFDE7D;
     display: inline-block;
@@ -7,7 +7,7 @@
     cursor: pointer;
     border: 1px solid #ffffff;
     
-    &Right {
+    &--right {
         padding-left: 2rem;
         transform: translate(calc(100% - 1.9rem), 0);
         top: 10%;
@@ -15,7 +15,7 @@
         transition: transform 0.5s ease-out;
     }
 
-    &Left {
+    &--left {
         padding-right: 1.9rem;
         transform: translate(calc(-100% + 1.9rem), 0);
         bottom: 10%;
@@ -29,13 +29,13 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .screenEgg {
+    .screen-egg {
         padding: 1rem;
         position: static;
         display: block;
 
-        &Right,
-        &Left {
+        &--right,
+        &--left {
             transition: none;
             transform: none
         }

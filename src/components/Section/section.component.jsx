@@ -1,3 +1,5 @@
+import "./section.styles.scss";
+
 export const Section = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className="section">{children}</div>;
 };

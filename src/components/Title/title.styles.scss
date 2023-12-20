@@ -1,4 +1,4 @@
-.title {
+.post-title {
     font-weight: bold;
     position: relative;
     display: inline-block;
@@ -16,7 +16,7 @@
         transition: width 0.3s;
     }
 
-    &Small {
+    &--small {
         font-size: 2rem;
         line-height: 1.2;
 
@@ -25,7 +25,7 @@
         }
     }
 
-    &Medium {
+    &--medium {
         font-size: 3.5rem;
         line-height: 1.2;
         margin-bottom: 1em;
@@ -37,12 +37,12 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .title {
-        &Small {
+    .post-title {
+        &--small {
             font-size: 1.5rem;
         }
 
-        &Medium {
+        &--medium {
             font-size: 2.5rem;
 
             &::after {

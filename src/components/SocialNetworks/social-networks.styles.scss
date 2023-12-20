@@ -1,5 +1,5 @@
 .list {
-    &Item {
+    &__item {
         margin-bottom: 0.5em;
 
         &:last-child {
@@ -7,7 +7,7 @@
         }
     }
 
-    &Link {
+    &__link {
         &:hover {
             opacity: 0.6;
             transition: opacity 0.3s;

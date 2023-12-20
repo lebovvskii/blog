@@ -1,2 +1,4 @@
 import "./title.styles.scss";
-export const Title = ({ children }) => <div className="title">{children}</div>;
+export const Title = ({ type = "medium", children }) => {
+  return <h2 className={`post-title post-title--${type}`}>{children}</h2>;
+};
