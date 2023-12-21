@@ -1,18 +1,20 @@
-import "./social-networks.styles.scss";
-import React from "react";
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { ScreenEgg } from "../ScreenEgg/screen-egg.component";
+import './social-networks.styles.scss';
+
+import React from 'react';
+import { AiFillGithub, AiFillInstagram } from 'react-icons/ai';
+
+import { ScreenEgg } from '../ScreenEgg/screen-egg.component';
 
 export const SocialNetworks = () => {
   const socialNetworks = [
     {
       id: 1,
-      url: "https://github.com",
+      url: 'https://github.com',
       icon: AiFillGithub,
     },
     {
       id: 2,
-      url: "https://instagram.com",
+      url: 'https://instagram.com',
       icon: AiFillInstagram,
     },
   ];

@@ -1,12 +1,15 @@
-import "../styles/reset.scss";
-import "../styles/global.scss";
+import '../styles/reset.scss';
+import '../styles/global.scss';
+
+import React from 'react';
+
 import {
-  Section,
-  Cover,
-  SocialNetworks,
   BuyMeCoffee,
+  Cover,
+  Section,
+  SocialNetworks,
   Title,
-} from "@/components";
+} from '@/components';
 
 export default function Home() {
   return (

@@ -7,6 +7,7 @@
 .yarn/install-state.gz
 
 /sanity/node_modules
+/sanity/.sanity/runtime
 
 # testing
 /coverage
