@@ -1,13 +1,16 @@
-import { ScreenEgg } from "../ScreenEgg/screen-egg.component";
-import "./buy-me-coffee.styles.scss";
+import React from 'react';
+
+import { ScreenEgg } from '../ScreenEgg/screen-egg.component';
+import styles from './buy-me-coffee.module.scss';
 
 export const BuyMeCoffee = () => {
+  console.log(styles);
   return (
-    <ScreenEgg type="right">
-      <div className="buy-coffee">
+    <ScreenEgg type="Right">
+      <div className={styles.buyCoffee}>
         <a
           href="https://www.youtube.com/watch?v=SUiMr3h50_g&ab_channel=Pumers"
-          className="buy-coffee__button"
+          className={styles.Button}
         >
           Buy me a coffee
         </a>

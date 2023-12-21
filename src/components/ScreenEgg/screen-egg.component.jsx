@@ -1,5 +1,13 @@
-import "./screen-egg.styles.scss";
+import cl from 'classnames';
+import React from 'react';
 
+import styles from './screen-egg.module.scss';
+
+// eslint-disable-next-line react/prop-types
 export const ScreenEgg = ({ type, children }) => {
-  return <div className={`screen-egg screen-egg--${type}`}>{children}</div>;
+  return (
+    <div className={cl(styles.screenEgg, styles[`screenEgg${type}`])}>
+      {children}
+    </div>
+  );
 };

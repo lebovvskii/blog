@@ -20,7 +20,7 @@ export default function Home() {
         <BuyMeCoffee />
       </Section>
       <Section>
-        <Title>New Post</Title>
+        <Title type="Medium">New Post</Title>
       </Section>
     </div>
   );

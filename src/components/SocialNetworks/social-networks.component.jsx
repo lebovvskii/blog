@@ -1,9 +1,8 @@
-import './social-networks.styles.scss';
-
 import React from 'react';
 import { AiFillGithub, AiFillInstagram } from 'react-icons/ai';
 
 import { ScreenEgg } from '../ScreenEgg/screen-egg.component';
+import styles from './social-networks.module.scss';
 
 export const SocialNetworks = () => {
   const socialNetworks = [
@@ -19,12 +18,14 @@ export const SocialNetworks = () => {
     },
   ];
 
+  console.log(styles.listLink);
+
   return (
-    <ScreenEgg type="left">
-      <ul className="list">
+    <ScreenEgg type="Left">
+      <ul className={styles.list}>
         {socialNetworks.map((socialNetwork) => (
           <li key={socialNetwork.id}>
-            <a href={socialNetwork.url} className="list__link">
+            <a href={socialNetwork.url} className={styles.listLink}>
               <socialNetwork.icon size="50" color="black" />
             </a>
           </li>
