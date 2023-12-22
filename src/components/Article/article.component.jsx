@@ -1,5 +1,5 @@
-import React from 'react';
+import styles from './article.module.scss';
 
-export const Article = () => {
-  return <div>Article</div>;
+export const Article = ({ children }) => {
+  return <div>{children}</div>;
 };
