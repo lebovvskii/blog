@@ -4,7 +4,6 @@ import { ScreenEgg } from '../ScreenEgg/screen-egg.component';
 import styles from './buy-me-coffee.module.scss';
 
 export const BuyMeCoffee = () => {
-  console.log(styles);
   return (
     <ScreenEgg type="Right">
       <div className={styles.buyCoffee}>
