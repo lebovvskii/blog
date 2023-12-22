@@ -14,7 +14,8 @@
     "sanity-deploy": "sanity deploy",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "manage": "sanity manage"
   },
   "dependencies": {
     "styled-components": "^6.1.1"

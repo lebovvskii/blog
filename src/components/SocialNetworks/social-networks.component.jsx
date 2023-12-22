@@ -18,8 +18,6 @@ export const SocialNetworks = () => {
     },
   ];
 
-  console.log(styles.listLink);
-
   return (
     <ScreenEgg type="Left">
       <ul className={styles.list}>
