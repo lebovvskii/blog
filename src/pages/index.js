@@ -1,12 +1,12 @@
+/* eslint-disable no-unused-vars */
 import '../styles/reset.scss';
 import '../styles/global.scss';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import {
   BuyMeCoffee,
   Cover,
-  Post,
   PostGrid,
   Section,
   SocialNetworks,
