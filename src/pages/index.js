@@ -1,11 +1,13 @@
 import '../styles/reset.scss';
 import '../styles/global.scss';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {
   BuyMeCoffee,
   Cover,
+  Post,
+  PostGrid,
   Section,
   SocialNetworks,
   Title,
@@ -16,7 +18,8 @@ import { loadPosts } from './api/posts';
 const LOAD_STEP = 4;
 
 export default function Home({ initialPosts, total }) {
-  console.log(initialPosts);
+  const [posts, setPosts] = useState(initialPosts);
+  console.log;
   return (
     <div>
       <Section>
@@ -26,6 +29,7 @@ export default function Home({ initialPosts, total }) {
       </Section>
       <Section>
         <Title type="Medium">New Post</Title>
+        <PostGrid posts={posts} />
       </Section>
     </div>
   );
