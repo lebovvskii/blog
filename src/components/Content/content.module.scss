@@ -7,7 +7,7 @@
     blockquote,
     ul,
     ol {
-        margin-bottom: 1.5em;
+        margin-bottom: 24px;
     }
 
     img {
@@ -15,11 +15,11 @@
     }
 
     figure {
-        margin-bottom: 1em;
+        margin-bottom: 16px;
     }
 
     ul {
-        margin-left: 1em;
+        margin-left: 16px;
 
         li::before {
             position: absolute;
@@ -28,24 +28,24 @@
         }
 
         li {
-            padding-left: 1em;
+            padding-left: 16px;
             position: relative;
-            margin-bottom: 0.5em;
+            margin-bottom: 8px;
         }
     }
 
     ol {
-        margin-left: 2em;
+        margin-left: 32px;
         list-style: decimal;
 
         li {
-            margin-bottom: 0.5em;
+            margin-bottom: 8px;
         }
     }
 
     blockquote {
-        margin-left: 1em;
+        margin-left: 16px;
         border-left: #FFDE7D solid 4px;
-        padding-left: 1em;
+        padding-left: 16px;
     }
 }

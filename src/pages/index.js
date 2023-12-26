@@ -5,6 +5,7 @@ import '../styles/global.scss';
 import React, { useState } from 'react';
 
 import {
+  Button,
   BuyMeCoffee,
   Cover,
   PostGrid,
@@ -19,7 +20,31 @@ const LOAD_STEP = 4;
 
 export default function Home({ initialPosts, total }) {
   const [posts, setPosts] = useState(initialPosts);
-  console.log;
+  const [loadedAmount, setLoadedAmount] = useState(LOAD_STEP);
+  const [loading, setLoading] = useState(false);
+
+  const isLoadButton = total > loadedAmount;
+
+  const params = new URLSearchParams({
+    start: loadedAmount,
+    end: loadedAmount + LOAD_STEP,
+  });
+
+  const getMorePosts = async () => {
+    setLoading(true);
+    try {
+      const data = await fetch(`/api/posts?${params.toString()}`).then(
+        (response) => response.json(),
+      );
+
+      setLoadedAmount(loadedAmount + 1);
+      setPosts([...posts, ...data.posts]);
+    } catch (error) {
+      throw new Error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div>
       <Section>
@@ -28,8 +53,20 @@ export default function Home({ initialPosts, total }) {
         <BuyMeCoffee />
       </Section>
       <Section>
-        <Title type="Medium">New Post</Title>
+        <Title type="medium">New Post</Title>
         <PostGrid posts={posts} />
+        {isLoadButton && (
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <Button onClickHandler={getMorePosts} disabled={loading}>
+              LoadMore
+            </Button>
+          </div>
+        )}
       </Section>
     </div>
   );
