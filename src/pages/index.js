@@ -40,7 +40,7 @@ export default function Home({ initialPosts, total }) {
       setLoadedAmount(loadedAmount + 1);
       setPosts([...posts, ...data.posts]);
     } catch (error) {
-      console.log(error);
+      throw new Error(error);
     } finally {
       setLoading(false);
     }

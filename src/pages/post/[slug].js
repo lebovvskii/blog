@@ -45,7 +45,6 @@ const Post = ({ post }) => {
   // eslint-disable-next-line no-undef
   const { DateTime } = require('luxon');
   const date = DateTime.fromISO(publishDate).toFormat('dd-LLL-yyyy');
-  console.log(date);
   return (
     <Article backUrl="/">
       <Title className={styles.title}>{title}</Title>
