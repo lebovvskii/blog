@@ -25,12 +25,17 @@ export default function Home({ initialPosts, total }) {
 
   const isLoadButton = total > loadedAmount;
 
+  const params = new URLSearchParams({
+    start: loadedAmount,
+    end: loadedAmount + LOAD_STEP,
+  });
+
   const getMorePosts = async () => {
     setLoading(true);
     try {
-      const data = await fetch(
-        `/api/posts?start=${loadedAmount}&end=${loadedAmount + LOAD_STEP}`,
-      ).then((response) => response.json());
+      const data = await fetch(`/api/posts?${params.toString()}`).then(
+        (response) => response.json(),
+      );
 
       setLoadedAmount(loadedAmount + 1);
       setPosts([...posts, ...data.posts]);
@@ -48,7 +53,7 @@ export default function Home({ initialPosts, total }) {
         <BuyMeCoffee />
       </Section>
       <Section>
-        <Title type="Medium">New Post</Title>
+        <Title type="medium">New Post</Title>
         <PostGrid posts={posts} />
         {isLoadButton && (
           <div

@@ -1,8 +1,6 @@
 import '../../styles/reset.scss';
 import '../../styles/global.scss';
 
-import { format } from 'date-fns';
-
 import { Article, Content, Title } from '@/components';
 
 import { client } from '../../../lib/client';
@@ -26,7 +24,7 @@ export async function getStaticPaths() {
 
   return {
     paths: paths,
-    fallback: 'blocking',
+    fallback: false,
   };
 }
 
@@ -44,11 +42,14 @@ export async function getStaticProps({ params: { slug } }) {
 
 const Post = ({ post }) => {
   const { title, publishDate, body } = post;
-  const date = format(new Date(publishDate), 'dd-mm-yyyy');
+  // eslint-disable-next-line no-undef
+  const { DateTime } = require('luxon');
+  const date = DateTime.fromISO(publishDate).toFormat('dd-LLL-yyyy');
+  console.log(date);
   return (
-    <Article backUrl="/" className={styles.post}>
-      <Title className={styles.postTitle}>{title}</Title>
-      <p className={styles.postDate}>{date}</p>
+    <Article backUrl="/">
+      <Title className={styles.title}>{title}</Title>
+      <p className={styles.date}>{date}</p>
       <Content body={body} />
     </Article>
   );

@@ -1,4 +1,3 @@
-import cl from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -12,12 +11,12 @@ export const Post = ({ post }) => {
   return (
     <Link
       href={`/post/${encodeURIComponent(slug.current)}`}
-      className={cl(styles.post, styles.postLink)}
+      className={styles.link}
     >
-      <Title type="Small" className={styles.postTitle}>
+      <Title type="small" className={styles.title}>
         {title}
       </Title>
-      <div className={styles.postContent}>
+      <div className={styles.content}>
         <div>
           <Image
             src={urlFor(image).url()}
@@ -26,7 +25,7 @@ export const Post = ({ post }) => {
             height="100"
           />
         </div>
-        <p className={styles.postDescription}>{description}</p>
+        <p className={styles.description}>{description}</p>
       </div>
     </Link>
   );

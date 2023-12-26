@@ -19,11 +19,11 @@ export const SocialNetworks = () => {
   ];
 
   return (
-    <ScreenEgg type="Left">
-      <ul className={styles.list}>
+    <ScreenEgg type="left">
+      <ul>
         {socialNetworks.map((socialNetwork) => (
           <li key={socialNetwork.id}>
-            <a href={socialNetwork.url} className={styles.listLink}>
+            <a href={socialNetwork.url} className={styles.link}>
               <socialNetwork.icon size="50" color="black" />
             </a>
           </li>

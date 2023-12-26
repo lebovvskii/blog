@@ -1,26 +1,24 @@
 .article {
     position: relative;
-    padding: 3rem 4rem 3rem 6rem;
+    padding: 48px 64px 48px 96px;
     max-width: 1300px;
     margin: 0 auto;
     box-sizing: border-box;
-
-    &Back {
-        position: absolute;
-        left: 3rem;
-        font-size: 2rem;
-        top: 4rem;
-        color: black;
-        text-decoration: none;
+    
+    @media only screen and (max-width: 800px) {
+        padding: 16px;
     }
 }
 
-@media only screen and (max-width: 800px) {
-    .article {
-        padding: 1rem;
+.back {
+    position: absolute;
+    left: 48px;
+    font-size: 2rem;
+    top: 64px;
+    color: black;
+    text-decoration: none;
 
-        &Back {
-            position: static;
-        }
+    @media only screen and (max-width: 800px) {
+        position: static;
     }
 }

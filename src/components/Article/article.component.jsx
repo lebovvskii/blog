@@ -7,10 +7,10 @@ import styles from './article.module.scss';
 export const Article = ({ children, className, backUrl }) => {
   return (
     <article className={cl(className, styles.article)}>
-      <Link href={backUrl} className={styles.articleBack}>
+      <Link href={backUrl} className={styles.back}>
         <AiOutlineArrowLeft />
       </Link>
-      <div className={styles.articleContent }>{children}</div>
+      <div>{children}</div>
     </article>
   );
 };
